@@ -1,0 +1,39 @@
+.container {
+  position: relative;
+  --border: 2px solid var(--black);
+}
+/* .hideSuggestions {
+  max-height: 40px;
+} */
+.input {
+  padding: 6px;
+  margin: 0;
+  /* width: 230px; */
+  width: 100%;
+  height: 40px;
+  border: var(--border);
+}
+.suggestions {
+  border-top: none;
+  /* max-height: 100px; */
+  overflow: auto;
+  z-index: 10000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--white);
+  border: var(--border);
+}
+.notFocused > .suggestions {
+  display: none;
+}
+.current {
+  background: var(--white-faded);
+}
+.suggestion {
+  cursor: pointer;
+}
+.suggestion:hover {
+  background: var(--white-slightly-faded);
+}

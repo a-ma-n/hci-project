@@ -1,0 +1,39 @@
+.container {
+  --transition-time: 200ms;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: height var(--transition-time) ease;
+}
+.container2 {
+  height: 700px;
+}
+.container1 {
+  height: 600px;
+}
+.wrapper1,
+.wrapper2 {
+  transition: top var(--transition-time) ease,
+    bottom var(--transition-time) ease;
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow-y: hidden;
+  background-color: white;
+}
+.wrapper1.inactive {
+  top: 0;
+  bottom: 100%;
+}
+.wrapper2.inactive {
+  top: 100%;
+  bottom: 0;
+}
+.active {
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}

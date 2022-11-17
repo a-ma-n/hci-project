@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 50px;
+  padding-top: 60px;
+  /* position: relative; */
+}
+.title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.faqContainer {
+  margin: 1em;
+  width: 70%;
+}
+.questionCard {
+  margin-bottom: 30px;
+}
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--white) !important;
+  border: none !important;
+}
+.bodyText {
+  padding: 20px 40px;
+}
+.btn {
+  background: var(--white);
+}
+.btn > span {
+  background: var(--primary);
+  transition: width 0.35s cubic-bezier(0.42, 0, 0.24, 2.36);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  /* width: 10px;
+  height: 0; */
+}
+.btn.clicked > span {
+  width: 10px;
+  /* height: 40px; */
+}
+.btn > img {
+  transition: transform 0.35s ease;
+  margin: 0 20px 0 15px;
+}
+.btn.clicked > img {
+  transform: rotateZ(90deg);
+}
+.fadedText > p {
+  text-align: center;
+}
+@media only screen and (max-width: 500px) {
+  .faqContainer {
+    padding: 0;
+    margin: 1em 0;
+    width: 100%;
+  }
+  .accordion {
+    width: 100%;
+    margin: 0;
+  }
+  .container {
+    padding-top: 30px;
+  }
+}

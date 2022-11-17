@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.timetableWrapper {
+  overflow: auto;
+  width: 100%;
+}
+table.timetable {
+  width: 100%;
+  min-width: 650px;
+  margin: 0;
+  margin-top: 30px;
+}
+td.cell {
+  user-select: none;
+  padding: 10px 0;
+}
+.label {
+  margin-bottom: 10px;
+}
+.slotCell {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  cursor: pointer;
+  /* border: 2px white solid !important; */
+}
+.slotCell:hover {
+  /* border: 2px var(--red) dashed !important; */
+  /* margin: -3px; */
+  background: var(--red-faded);
+}
+.reserved {
+  background-color: var(--red) !important;
+}
